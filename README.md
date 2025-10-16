@@ -105,9 +105,34 @@ Seven independent tests confirmed that the SC Layer maintains
 | **Autonomous Control** | Moral calibration | Vehicle AI minimizing passenger stress |
 
 ---
+# 6.1 — User Feedback Acquisition (U_t Signal Matrix)
 
+The SC Layer receives emotional feedback (U_t) from multiple input channels —  
+ranging from explicit user ratings to multimodal sensor fusion.
+
+###  U_t Input Methods Matrix — Emotional Feedback Acquisition
+
+| № | Method | Description | Data Source / Sensors | Implementation Complexity | Accuracy / Resolution | Latency | Suitable Domains |
+|----|---------|--------------|------------------------|----------------------------|-----------------------|----------|------------------|
+| **1** | **Self-assessment sliders / bars** | Direct user rating of emotion, motivation, comfort, or trust. | UI controls, web/mobile app | 🟢 Low | 🟠 Moderate (subjective) | ⚡ Instant | Education, psychology, UX tests, gamified interfaces |
+| **2** | **Facial expression analysis** | Detects affective states via microexpressions, eye openness, smiles, etc. | Camera + computer vision (OpenCV / MediaPipe) | 🟡 Medium | 🟢 High (with calibration) | ⚡ Real-time (30–100 ms) | Games, telepresence, therapy, AR/VR |
+| **3** | **Voice tone & prosody analysis** | Detects tension, fatigue, or empathy via pitch, tone, and tempo. | Microphone + audio model (pitch & stress detector) | 🟡 Medium | 🟢 High (for speech contexts) | ⚡ Real-time (50–200 ms) | AI assistants, call centers, robotics |
+| **4** | **Heart rate / HRV sensors** | Measures arousal, stress, focus through heart rate variability. | Smart band, smartwatch, ECG patch | 🟡 Medium | 🟢 High | 🕓 1–2 s | Healthcare, meditation, performance apps |
+| **5** | **Galvanic skin response (GSR)** | Measures skin conductance — emotional arousal and stress levels. | GSR electrode (finger or wrist) | 🟡 Medium | 🟢 High | 🕓 1–3 s | Neuroscience, stress tracking |
+| **6** | **Eye-tracking / pupil dilation** | Detects attention, surprise, or fatigue. | IR camera or VR headset sensors | 🔴 High | 🟢 High | ⚡ Fast (20–50 ms) | VR/AR, training simulators, driver monitoring |
+| **7** | **Behavioral telemetry** | Tracks reaction time, cursor speed, hesitation, micro-pauses. | App analytics, keyboard/mouse sensors | 🟢 Low | 🟠 Moderate | ⚡ Instant | UX, education, games |
+| **8** | **Text sentiment & linguistic tone** | Detects emotion from text using natural language sentiment models. | NLP / LLM-based processing | 🟢 Low | 🟢 High (in language contexts) | 🕓 100–300 ms | Chatbots, writing assistants, AI dialogue |
+| **9** | **Multimodal fusion (composite U_t)** | Combines multiple inputs (text + voice + biometrics) for robust estimation. | Sensor fusion or AI model | 🔴 High | 🟢 Very High | 🕓 100–500 ms | Full empathic AI, robotics, adaptive systems |
+| **10** | **Implicit feedback loops** | System infers ΔE from user retention, engagement, or return probability. | Backend metrics, time-series data | 🟢 Low | 🟠 Moderate (statistical) | 🕓 minutes–hours | Online platforms, learning, recommendation engines |
+---
+###  Interpretation
+- Each input contributes to **U_t (user emotional response)**, normalized to [0, 1].  
+- Choice of method depends on context and ethical constraints.  
+- Systems can begin with simple **explicit feedback (bars/sliders)**,  
+  and later integrate **implicit physiological and behavioral channels**.
+---
+###  Recommended Pipeline Example 
 ## 7. Repository Contents
-
 sc_test_clean.py
 sublevels_.csv
 temporal_.csv
@@ -117,10 +142,7 @@ mu_k_sweep_.csv
 bifurcation_.csv
 seed_repro_*.csv
 SC_Validation_Report.pdf
-
-
 ---
-
 ## 8. Citation
 
 **Barzenkov, Max.**  
@@ -128,23 +150,18 @@ SC_Validation_Report.pdf
 Poznań, October 2025.  
 Part of the **Project: Synthetic Consciousness v1.0**.  
 DOI pending (Zenodo submission in progress).  
-
 ---
-
 ## 9. License
 
 MIT License — free for research, non-commercial, and educational use.  
 Attribution required: *“Based on the Synthetic Conscience Layer by Max Barzenkov (Petronus Project, 2025)”*.
-
 ---
-
 ## 10. Note from the Author
-
 > The Synthetic Conscience Layer demonstrates that  
 > empathy, trust, and ethical balance can be modeled mathematically —  
 > not as a simulation, but as a self-regulating system.  
 >
-> — Max Barzenkov, Poznań, October 2025
+> — Max Barzenkov, Poznań, 16 October 2025
 # Synthetic-Conscience Synthetic Conscience Protocol: The Missing Layer
 https://medium.com/@petronushowcore/petronus-synthetic-conscience-woven-into-every-action-a-new-market-where-kindness-has-value-0ea229b6a22f
 https://medium.com/@petronushowcore/synthetic-conscience-protocol-the-missing-layer-bb2d329da587
