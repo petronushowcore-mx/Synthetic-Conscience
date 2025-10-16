@@ -1,7 +1,56 @@
 # 🧠 Synthetic Conscience Layer (ΔE Regulation System)
 ### part of the **Project: Synthetic Consciousness v1.0**
 ---
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+SYNTHETIC CONSCIENCE LICENSE (SCL v1.0)
+© 2025 Max Barzenkov — Project: Synthetic Consciousness v1.0  
+Poznań, Poland — October 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this work, including the Synthetic Conscience Layer formula (ΔE regulation system),
+its source code, datasets, documentation, and related files (the “Software”),
+to use, reproduce, and modify the Software **for research and educational purposes only**, 
+subject to the following conditions:
+
+1. **Non-Commercial Use Only**  
+   The Software may not be used, in whole or in part, for any commercial purpose,
+   including but not limited to proprietary software, hardware products,
+   industrial systems, or AI/ML architectures distributed or sold for profit,
+   without the **prior written permission of the author** (Max Barzenkov).
+
+2. **Attribution**  
+   All copies, derivatives, and research publications using or referencing this work
+   must include the following acknowledgment:
+
+   > “Based on the Synthetic Conscience Layer (ΔE Regulation System)
+   > developed by Max Barzenkov, Project: Synthetic Consciousness v1.0, 2025.”
+
+3. **Derivative Works**  
+   Derivative research or software must retain this license and reference
+   the original repository or publication.
+
+4. **No Warranty**  
+   The Software is provided “as is,” without warranty of any kind, express or implied,
+   including but not limited to the warranties of merchantability,
+   fitness for a particular purpose, and non-infringement.
+
+5. **Intellectual Property**  
+   All rights to the Synthetic Conscience formula (ΔE regulation equation) 
+   and related theoretical models remain the sole intellectual property 
+   of Max Barzenkov.
+
+6. **Jurisdiction**  
+   This license shall be governed by and construed in accordance with
+   the laws of the European Union and the Republic of Poland.
+
+By using, copying, or distributing this work, you agree to abide by
+the terms of this license.
+
+---
+
+For commercial licensing inquiries, contact:  
+📧 petronus.project@proton.me  
+© 2025 Max Barzenkov — All Rights Reserved
+
 [![Python](https://img.shields.io/badge/Python-3.14-blue.svg)](https://www.python.org/)
 [![Status](https://img.shields.io/badge/Status-Validated-brightgreen.svg)](#)
 [![Location](https://img.shields.io/badge/Origin-Poznań%2C%20Poland-lightgrey.svg)](#)
@@ -151,12 +200,9 @@ Poznań, October 2025.
 Part of the **Project: Synthetic Consciousness v1.0**.  
 DOI pending (Zenodo submission in progress).  
 ---
-## 9. License
 
-MIT License — free for research, non-commercial, and educational use.  
-Attribution required: *“Based on the Synthetic Conscience Layer by Max Barzenkov (Petronus Project, 2025)”*.
 ---
-## 10. Note from the Author
+## 9. Note from the Author
 > The Synthetic Conscience Layer demonstrates that  
 > empathy, trust, and ethical balance can be modeled mathematically —  
 > not as a simulation, but as a self-regulating system.  
