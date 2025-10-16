@@ -114,16 +114,16 @@ ranging from explicit user ratings to multimodal sensor fusion.
 
 | № | Method | Description | Data Source / Sensors | Implementation Complexity | Accuracy / Resolution | Latency | Suitable Domains |
 |----|---------|--------------|------------------------|----------------------------|-----------------------|----------|------------------|
-| **1** | **Self-assessment sliders / bars** | Direct user rating of emotion, motivation, comfort, or trust. | UI controls, web/mobile app | 🟢 Low | 🟠 Moderate (subjective) | ⚡ Instant | Education, psychology, UX tests, gamified interfaces |
-| **2** | **Facial expression analysis** | Detects affective states via microexpressions, eye openness, smiles, etc. | Camera + computer vision (OpenCV / MediaPipe) | 🟡 Medium | 🟢 High (with calibration) | ⚡ Real-time (30–100 ms) | Games, telepresence, therapy, AR/VR |
-| **3** | **Voice tone & prosody analysis** | Detects tension, fatigue, or empathy via pitch, tone, and tempo. | Microphone + audio model (pitch & stress detector) | 🟡 Medium | 🟢 High (for speech contexts) | ⚡ Real-time (50–200 ms) | AI assistants, call centers, robotics |
-| **4** | **Heart rate / HRV sensors** | Measures arousal, stress, focus through heart rate variability. | Smart band, smartwatch, ECG patch | 🟡 Medium | 🟢 High | 🕓 1–2 s | Healthcare, meditation, performance apps |
-| **5** | **Galvanic skin response (GSR)** | Measures skin conductance — emotional arousal and stress levels. | GSR electrode (finger or wrist) | 🟡 Medium | 🟢 High | 🕓 1–3 s | Neuroscience, stress tracking |
-| **6** | **Eye-tracking / pupil dilation** | Detects attention, surprise, or fatigue. | IR camera or VR headset sensors | 🔴 High | 🟢 High | ⚡ Fast (20–50 ms) | VR/AR, training simulators, driver monitoring |
-| **7** | **Behavioral telemetry** | Tracks reaction time, cursor speed, hesitation, micro-pauses. | App analytics, keyboard/mouse sensors | 🟢 Low | 🟠 Moderate | ⚡ Instant | UX, education, games |
-| **8** | **Text sentiment & linguistic tone** | Detects emotion from text using natural language sentiment models. | NLP / LLM-based processing | 🟢 Low | 🟢 High (in language contexts) | 🕓 100–300 ms | Chatbots, writing assistants, AI dialogue |
-| **9** | **Multimodal fusion (composite U_t)** | Combines multiple inputs (text + voice + biometrics) for robust estimation. | Sensor fusion or AI model | 🔴 High | 🟢 Very High | 🕓 100–500 ms | Full empathic AI, robotics, adaptive systems |
-| **10** | **Implicit feedback loops** | System infers ΔE from user retention, engagement, or return probability. | Backend metrics, time-series data | 🟢 Low | 🟠 Moderate (statistical) | 🕓 minutes–hours | Online platforms, learning, recommendation engines |
+| **1** | **Self-assessment sliders / bars** | Direct user rating of emotion, motivation, comfort, or trust. | UI controls, web/mobile app |  Low |  Moderate (subjective) |  Instant | Education, psychology, UX tests, gamified interfaces |
+| **2** | **Facial expression analysis** | Detects affective states via microexpressions, eye openness, smiles, etc. | Camera + computer vision (OpenCV / MediaPipe) |  Medium |  High (with calibration) |  Real-time (30–100 ms) | Games, telepresence, therapy, AR/VR |
+| **3** | **Voice tone & prosody analysis** | Detects tension, fatigue, or empathy via pitch, tone, and tempo. | Microphone + audio model (pitch & stress detector) |  Medium |  High (for speech contexts) |  Real-time (50–200 ms) | AI assistants, call centers, robotics |
+| **4** | **Heart rate / HRV sensors** | Measures arousal, stress, focus through heart rate variability. | Smart band, smartwatch, ECG patch |  Medium |  High |  1–2 s | Healthcare, meditation, performance apps |
+| **5** | **Galvanic skin response (GSR)** | Measures skin conductance — emotional arousal and stress levels. | GSR electrode (finger or wrist) |  Medium |  High |  1–3 s | Neuroscience, stress tracking |
+| **6** | **Eye-tracking / pupil dilation** | Detects attention, surprise, or fatigue. | IR camera or VR headset sensors |  High |  High |  Fast (20–50 ms) | VR/AR, training simulators, driver monitoring |
+| **7** | **Behavioral telemetry** | Tracks reaction time, cursor speed, hesitation, micro-pauses. | App analytics, keyboard/mouse sensors |  Low | Moderate |  Instant | UX, education, games |
+| **8** | **Text sentiment & linguistic tone** | Detects emotion from text using natural language sentiment models. | NLP / LLM-based processing |  Low |  High (in language contexts) |  100–300 ms | Chatbots, writing assistants, AI dialogue |
+| **9** | **Multimodal fusion (composite U_t)** | Combines multiple inputs (text + voice + biometrics) for robust estimation. | Sensor fusion or AI model |  High |  Very High |  100–500 ms | Full empathic AI, robotics, adaptive systems |
+| **10** | **Implicit feedback loops** | System infers ΔE from user retention, engagement, or return probability. | Backend metrics, time-series data |  Low |  Moderate (statistical) |  minutes–hours | Online platforms, learning, recommendation engines |
 ---
 ###  Interpretation
 - Each input contributes to **U_t (user emotional response)**, normalized to [0, 1].  
