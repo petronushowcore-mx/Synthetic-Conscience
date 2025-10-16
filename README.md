@@ -19,8 +19,6 @@
 **Synthetic Conscience Regulation Formula (ΔE Feedback Loop):**
 ΔE_t = μ * ΔE_{t-1} + (1 - μ) * (U_t * C_t) + K * (E_target - ΔE_{t-1})
 
-yaml
-Копировать код
 
 ### Glossary
 
@@ -120,8 +118,6 @@ bifurcation_.csv
 seed_repro_*.csv
 SC_Validation_Report.pdf
 
-yaml
-Копировать код
 
 ---
 
