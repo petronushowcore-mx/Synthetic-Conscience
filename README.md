@@ -8,8 +8,32 @@ a robust, latency-tolerant adaptive feedback system designed for empathic analyt
 
 ##  Core Formula
 
-```math
-ΔE_t = μ_t · ΔE_{t−1} + (1 − μ_t) · m_t^(r) + κ · (E_lead_t − ΔE_t) 
+## Основная формула
+
+$$
+\Delta E_t
+= \mu_t\,\Delta E_{t-1}
++ (1-\mu_t)\, m_t^{(r)}
++ \kappa\,\big(E^{\mathrm{lead}}_t - \Delta E_t\big)
+$$
+
+где
+
+$$
+\begin{aligned}
+m_t^{(r)} &= (1-r)\,\bar U_t
++ r\,\operatorname{median}_{t'\in W_t}\!\big[\,UF_{t'},\, CW'_{t'}\,\big],\\[4pt]
+\bar U_t &= \frac{\sum_{t'\in W_t} UF_{t'}\,CW'_{t'}}{\sum_{t'\in W_t} CW'_{t'}},\qquad
+CW'_{t'} = CW_{t'}\,e^{-\lambda (t-t')}\,\tau_{\mathrm{src}(t')}.
+\end{aligned}
+$$
+
+**По умолчанию:**
+- \( r = 0.80 \)
+- \( \mu_t \in [0.25, 0.70],\ \mu_0 \approx 0.37 \)
+- \( K_t \in [10,60] \) (адаптивное окно)
+- \( \kappa = 0.25\,e^{-0.2L} \), \( h = 2.5 \)
+
 where
 
 <pre> ```math m_t^{(r)} = (1 - r) · \bar{U}_t + r · \mathrm{median}_{t' \in W_t} [UF_{t'}, CW_{t'}] ``` </pre>
