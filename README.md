@@ -1,20 +1,23 @@
 # ΔE++ (Petronus SC v1.0)
 **Robust Adaptive Empathic Feedback Engine**
 
-ΔE++ is the final stable version of the Synthetic Conscience core model —  
-a robust, latency-tolerant adaptive feedback system designed for empathic analytics and ethical AI control.
+ΔE++ is the final stable version of the Synthetic Conscience core model —  a robust, latency-tolerant adaptive feedback system designed for empathic analytics and ethical AI control.
 
 ---
 
 ##  Core Formula
 
-## Основная формула
 
-\[
-\Delta E_t = \mu_t \Delta E_{t-1} + (1 - \mu_t) m_t^{(r)} + \kappa (E_t^{lead} - \Delta E_t)
-\]
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\Delta%20E_t%20=%20\mu_t%20\Delta%20E_{t-1}%20+%20(1-\mu_t)%20m_t^{(r)}%20+%20\kappa%20(E_t^{lead}-%20\Delta%20E_t)" alt="ΔE formula"/>
+</p>
 
-где
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?m_t^{(r)}%20=%20(1-r)\bar{U}_t%20+%20r\,\operatorname{median}_{t'\in%20W_t}[UF_{t'},CW_{t'}]" alt="m_t formula"/>
+</p>
+
+
+where
 
 $$
 \begin{aligned}
@@ -25,7 +28,7 @@ CW'_{t'} = CW_{t'}\,e^{-\lambda (t-t')}\,\tau_{\mathrm{src}(t')}.
 \end{aligned}
 $$
 
-**По умолчанию:**
+**By default:**
 - \( r = 0.80 \)
 - \( \mu_t \in [0.25, 0.70],\ \mu_0 \approx 0.37 \)
 - \( K_t \in [10,60] \) (адаптивное окно)
@@ -113,24 +116,40 @@ Adaptive user-modeling / collective emotion modeling
 it balances between responsiveness (μ) and stability (r),
 learning how much trust to give to each new signal (UFₜ) based on contextual weight CWₜ and time decay.
 
- Repository Files
+##  Repository Files
 python
 Копировать код
 01_results/
-  ├─ deltaE_final_clean.csv
-  ├─ deltaE_summary.txt
+├─ deltaE_final_clean.csv
+├─ deltaE_summary.txt
+
 02_specification/
-  ├─ Specification_Final.pdf
-  ├─ GITHUB_README_SNIPPET.md
+├─ Specification_Final.pdf
+├─ GITHUB_README_SNIPPET.md
+
 03_tests/
-  ├─ DeltaE_StressResults.zip
+├─ DeltaE_StressResults.zip
+
+
  Summary
 ΔE++ (Petronus SC v1.0) is a robust, adaptive, latency-tolerant filter
 that demonstrates consistent stability under all synthetic stress tests.
 Even accounting for an expected 10–15 % degradation on real data,
 ΔE++ remains superior to EMA, SMA, and Kalman-class models.
 
- 
+ License & Usage
+
+Copyright © 2025 Petronus Project.
+All rights reserved.
+
+This repository and the ΔE++ (Petronus SC v1.0) model are released for research and educational purposes only.
+Commercial or derivative use, redistribution, or integration into proprietary products is not permitted without prior written consent from the author.
+The ΔE++ adaptive mechanism and its derivatives are subject to pending patent protection (Priority 2025).
+Any commercial deployment, integration, or publication must obtain explicit licensing approval from Petronus Project.
+To request collaboration, licensing, or partnership opportunities, please contact:
+ contact@petronus.eu
+
+Unauthorized commercial use or redistribution of this work, in whole or in part, is strictly prohibited and may result in legal action.
 
 DOI pending (Zenodo submission in progress).  
 ---
@@ -148,3 +167,6 @@ Part of the **Project: Synthetic Consciousness v1.0**.
 # Synthetic-Conscience Synthetic Conscience Protocol: The Missing Layer
 https://medium.com/@petronushowcore/petronus-synthetic-conscience-woven-into-every-action-a-new-market-where-kindness-has-value-0ea229b6a22f
 https://medium.com/@petronushowcore/synthetic-conscience-protocol-the-missing-layer-bb2d329da587
+
+
+
