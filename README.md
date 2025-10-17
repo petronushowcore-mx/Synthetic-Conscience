@@ -59,7 +59,6 @@ For commercial licensing inquiries, contact:
 **Date:** October 2025  
 **Location:** Poznań, Poland  
 **Project:** *Synthetic Consciousness v1.0*  
-**License:** MIT (open for scientific and non-commercial use)
 
 ---
 
