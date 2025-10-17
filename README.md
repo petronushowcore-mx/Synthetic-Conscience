@@ -10,12 +10,9 @@ a robust, latency-tolerant adaptive feedback system designed for empathic analyt
 
 ## Основная формула
 
-$$
-\Delta E_t
-= \mu_t\,\Delta E_{t-1}
-+ (1-\mu_t)\, m_t^{(r)}
-+ \kappa\,\big(E^{\mathrm{lead}}_t - \Delta E_t\big)
-$$
+\[
+\Delta E_t = \mu_t \Delta E_{t-1} + (1 - \mu_t) m_t^{(r)} + \kappa (E_t^{lead} - \Delta E_t)
+\]
 
 где
 
