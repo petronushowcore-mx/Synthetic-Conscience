@@ -36,7 +36,7 @@ typical of robust hybrid filters seen in experimental IEEE-grade adaptive system
 
  Scientific Context
 If evaluated under TRL (Technology Readiness Level):
-ΔE++ reaches TRL 5–6 — validated in simulations, ready for pilot integration.
+ΔE++ reaches TRL 4-6 — validated in simulations, ready for pilot integration.
 
 Applicable to:
 
@@ -53,19 +53,6 @@ Adaptive user-modeling / collective emotion modeling
 it balances between responsiveness (μ) and stability (r),
 learning how much trust to give to each new signal (UFₜ) based on contextual weight CWₜ and time decay.
 
-##  Repository Files
-python
-Копировать код
-01_results/
-├─ deltaE_final_clean.csv
-├─ deltaE_summary.txt
-
-02_specification/
-├─ Specification_Final.pdf
-├─ GITHUB_README_SNIPPET.md
-
-03_tests/
-├─ DeltaE_StressResults.zip
 (USPTO Provisional Patent 2025)
 
  Summary
