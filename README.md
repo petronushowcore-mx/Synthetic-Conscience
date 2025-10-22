@@ -1,81 +1,18 @@
-# ΔE++ (Petronus SC v1.0)
-**Robust Adaptive Empathic Feedback Engine**
 
-ΔE++ is the final stable version of the Synthetic Conscience core model —  a robust, latency-tolerant adaptive feedback system designed for empathic analytics and ethical AI control.
+ΔE Hybrid — Adaptive Coherence Framework
 
----
+The ΔE Hybrid model is an adaptive coherence controller designed to stabilize dynamic feedback between perception, emotion, and reasoning layers.
+It maintains robustness under uncertainty and latency through multi-level feedback adaptation.
 
-##  Core Formula
-
-
-<p align="center">
-  <img src="https://latex.codecogs.com/svg.image?\Delta%20E_t%20=%20\mu_t%20\Delta%20E_{t-1}%20+%20(1-\mu_t)%20m_t^{(r)}%20+%20\kappa%20(E_t^{lead}-%20\Delta%20E_t)" alt="ΔE formula"/>
-</p>
-
-<p align="center">
-  <img src="https://latex.codecogs.com/svg.image?m_t^{(r)}%20=%20(1-r)\bar{U}_t%20+%20r\,\operatorname{median}_{t'\in%20W_t}[UF_{t'},CW_{t'}]" alt="m_t formula"/>
-</p>
-
-
-where
-
-$$
-\begin{aligned}
-m_t^{(r)} &= (1-r)\,\bar U_t
-+ r\,\operatorname{median}_{t'\in W_t}\!\big[\,UF_{t'},\, CW'_{t'}\,\big],\\[4pt]
-\bar U_t &= \frac{\sum_{t'\in W_t} UF_{t'}\,CW'_{t'}}{\sum_{t'\in W_t} CW'_{t'}},\qquad
-CW'_{t'} = CW_{t'}\,e^{-\lambda (t-t')}\,\tau_{\mathrm{src}(t')}.
-\end{aligned}
-$$
-
-**By default:**
-- \( r = 0.80 \)
-- \( \mu_t \in [0.25, 0.70],\ \mu_0 \approx 0.37 \)
-- \( K_t \in [10,60] \) (адаптивное окно)
-- \( \kappa = 0.25\,e^{-0.2L} \), \( h = 2.5 \)
-
-where
-
-<pre> ```math m_t^{(r)} = (1 - r) · \bar{U}_t + r · \mathrm{median}_{t' \in W_t} [UF_{t'}, CW_{t'}] ``` </pre>
-Defaults:
-
-r = 0.80 (robust median mix)
-
-μₜ ∈ [0.25, 0.70], μ₀ ≈ 0.37
-
-Kₜ ∈ [10, 60] adaptive window
-
-κ = 0.25·exp(−0.2L)
-
-h = 2.5 (change-point threshold)
+By default, the system balances short-term responsiveness with long-term coherence, ensuring smooth state transitions and emotional centering.
 
 Modes:
 
-Balanced Robust (default) → r=0.80, adaptive μₜ, latency-aware CW
+Balanced Robust — optimized for adaptive coherence.
 
-Storm Mode → r=1.0, μ≈0.30, fast adaptation (30–60 steps)
+Storm — high-resilience mode for instability compensation.
 
- Benchmark Scenarios
-Tested across 4 stress conditions:
-
-Extreme latency (L = 30)
-
-Adversarial spikes (10% inverted inputs)
-
-Calm → Stress → Relief loop (empathic dynamic simulation)
-
-Variance decay (gradual noise reduction)
-
-Each model ran on 4000 synthetic steps with drift, delay, and feedback noise.
-
- Models Compared
-Model	Type	Adaptive	Delay-tolerance	Robustness
-EMA	Exponential moving average	No	Low	Medium
-SMA	Simple moving average	No	Very low	Low
-Kalman	Classic scalar filter	No	Medium	Medium-high
-Random Walk	Passive baseline	Yes	Medium	Low
-ΔE++ (Petronus)	Dual-loop adaptive	Yes	High	Very High
-
+All specific equations, parameters, and feedback weighting mechanisms are protected under USPTO Provisional Patent 2025.
  Average Improvements (ΔE++ vs others)
 Compared to	Variance ↓	MSE ↓	Overshoot ↓	Recovery t½ ↑
 EMA	−88 %	−21 %	−15 %	+22 %
@@ -129,10 +66,10 @@ python
 
 03_tests/
 ├─ DeltaE_StressResults.zip
-
+(USPTO Provisional Patent 2025)
 
  Summary
-ΔE++ (Petronus SC v1.0) is a robust, adaptive, latency-tolerant filter
+ΔEHybrid (prew. Petronus SC v1.0) is a robust, adaptive, latency-tolerant filter
 that demonstrates consistent stability under all synthetic stress tests.
 Even accounting for an expected 10–15 % degradation on real data,
 ΔE++ remains superior to EMA, SMA, and Kalman-class models.
